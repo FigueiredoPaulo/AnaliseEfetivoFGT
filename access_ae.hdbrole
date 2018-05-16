@@ -1,0 +1,20 @@
+role APLICACOES.AnaliseEfetivo::access_ae extends role sap.hana.xs.selfService.user.roles::USSExecutor, sap.hana.xs.admin.roles::SQLCCViewer
+{
+system privilege: CATALOG READ;
+
+catalog schema "ANALISE_EFETIVO": SELECT;
+catalog sql object "ANALISE_EFETIVO"."EFETIVOS": //Objecttype: TABLE
+	SELECT;
+catalog sql object "SYS"."GRANTED_ROLES": //Objecttype: VIEW
+	SELECT;
+catalog sql object "ANALISE_EFETIVO"."HIST_EFETIVO": //Objecttype: TABLE
+	SELECT;
+
+catalog analytic privilege : "_SYS_BI_CP_ALL";
+
+package APLICACOES.AnaliseEfetivo: REPO.READ, REPO.EDIT_NATIVE_OBJECTS, REPO.ACTIVATE_NATIVE_OBJECTS, REPO.MAINTAIN_NATIVE_PACKAGES, REPO.EDIT_IMPORTED_OBJECTS, REPO.ACTIVATE_IMPORTED_OBJECTS, REPO.MAINTAIN_IMPORTED_PACKAGES;
+
+application privilege: "APLICACOES.AnaliseEfetivo::Admin";
+application privilege: "APLICACOES.AnaliseEfetivo::Execute";
+
+}

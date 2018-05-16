@@ -1,0 +1,4 @@
+{
+"role_for_auto_user" : "APLICACOES.AnaliseEfetivo::access_ae",
+"description" : "Admin SQL connection" 
+}     

@@ -1,0 +1,15 @@
+{
+     "anonymous_connection": "APLICACOES.AnaliseEfetivo::AdminConn", 
+     "default_connection" : "APLICACOES.AnaliseEfetivo::AdminConn",
+     
+   "exposed" : true,
+     "cache_control" : "no-store",
+     "cors" :                      
+            {
+             "enabled" : true,
+              "allowMethod":["GET","POST","HEAD","OPTIONS"]
+            }, 
+     "default_file" : "index.html",                  
+
+   "authentication" : null  
+}  

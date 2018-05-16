@@ -1,0 +1,26 @@
+<mvc:View
+        controllerName="sap.tnt.sample.ToolHeaderControls.controller.app"
+		xmlns="sap.m"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:core="sap.ui.core"
+	    xmlns:tnt="sap.tnt"
+	    xmlns:u="sap.ui.unified"
+	    displayBlock="true">
+		<tnt:ToolHeader>
+		<Image src="/APLICACOES/AnaliseEfetivo/images/Logicalis_horizontal_branco_vermelho.png" width="17%">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow" />
+			</layoutData>
+		</Image>
+		<ToolbarSpacer />
+		<ToolbarSpacer />
+		<Button id= "btnNome" text="{userM>/user}" type="Transparent" press="handleUserNamePress">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow" />
+			</layoutData>
+		</Button>
+	</tnt:ToolHeader>
+
+	<App class="appAnalise" id="app">
+	</App>
+</mvc:View>
